@@ -1,10 +1,10 @@
-# Longhand
+# Sounds Like Me
 
-**Teach your AI assistant to write in your own voice.** Longhand is an agent skill that builds a personal writing-style profile from texts you really wrote, in any language, so that what the assistant writes for you sounds like you and not like AI.
+**Teach your AI assistant to write in your own voice.** Sounds Like Me is an agent skill that builds a personal writing-style profile from texts you really wrote, in any language, so that what the assistant writes for you sounds like you and not like AI.
 
 [Leggi in italiano](README.it.md)
 
-A humanizer takes the AI out of a text. Longhand puts you into it.
+A humanizer takes the AI out of a text. Sounds Like Me puts you into it.
 
 ## Example
 
@@ -20,7 +20,7 @@ One request, "ask the team for comments on the report by Friday", three results.
 
 Clean, but anyone could have written it.
 
-**With a Longhand profile** (here, of someone whose emails are short, start in lowercase after the greeting, give the reason for a deadline and sign off with "thanks,"):
+**With a Sounds Like Me profile** (here, of someone whose emails are short, start in lowercase after the greeting, give the reason for a deadline and sign off with "thanks,"):
 
 > Hi all,
 >
@@ -31,7 +31,7 @@ Clean, but anyone could have written it.
 
 ## What it does
 
-`longhand` is a skill that builds another, personal skill. It reads your texts, derives the profile of your voice and saves it as a skill of its own (`style-yourname`). From then on your assistant uses it whenever you ask for something written in your name.
+`sounds-like-me` is a skill that builds another, personal skill. It reads your texts, derives the profile of your voice and saves it as a skill of its own (`style-yourname`). From then on your assistant uses it whenever you ask for something written in your name.
 
 The personal skill contains:
 
@@ -44,7 +44,7 @@ The personal skill contains:
 
 ## How it works
 
-A language model writes the most likely next thing, so by default it makes the choice that suits the widest range of readers. You choose for one reader and one subject. Longhand records those choices.
+A language model writes the most likely next thing, so by default it makes the choice that suits the widest range of readers. You choose for one reader and one subject. Sounds Like Me records those choices.
 
 1. **It collects samples.** Files you attach, text you paste, mail and documents if you connect them and agree.
 2. **It weighs them.** Not every text counts the same: recent, very tidy ones may already have been through an AI. The best sample is an AI draft together with the version you rewrote by hand, because it shows what you cut, what you add and what you change.
@@ -54,47 +54,47 @@ A language model writes the most likely next thing, so by default it makes the c
 
 Two rules set this apart from a list of banned phrases. First: what is yours stays yours. If your hand-written texts contain a pattern usually blamed on AI, it is your voice and it is left alone. Second: voice is not good writing. The skill is not there to improve you. It is there to sound like you (typos excluded).
 
-## Longhand and humanizers
+## Sounds Like Me and humanizers
 
-Tools such as [Humanizer](https://github.com/blader/humanizer) are very good at finding and removing AI writing patterns in a text you already have, and Humanizer can also match a writing sample you paste along with the text. Longhand does a different job:
+Tools such as [Humanizer](https://github.com/blader/humanizer) are very good at finding and removing AI writing patterns in a text you already have, and Humanizer can also match a writing sample you paste along with the text. Sounds Like Me does a different job:
 
 - it builds your profile once, from many texts, and keeps it as a skill you reuse;
 - it records what you do (greetings, formulas, rhythm, registers), not only what to avoid;
 - it works in your language, with a pack of patterns and punctuation rules written for it;
 - it updates when you correct a text.
 
-They work well together: a humanizer cleans any text, Longhand makes texts start out in your voice.
+They work well together: a humanizer cleans any text, Sounds Like Me makes texts start out in your voice.
 
-Longhand writes for human readers. Getting past AI detectors is not a goal.
+Sounds Like Me writes for human readers. Getting past AI detectors is not a goal.
 
 ## Install
 
 In Claude Code, as a plugin:
 
 ```text
-/plugin install longhand --marketplace fdesimone/longhand
+/plugin install sounds-like-me --marketplace fdesimone/sounds-like-me
 ```
 
 With any agent that supports skills, paste:
 
 ```text
-Install the longhand skill from https://github.com/fdesimone/longhand
+Install the sounds-like-me skill from https://github.com/fdesimone/sounds-like-me
 ```
 
 Or with `npx`:
 
 ```sh
-npx skills add fdesimone/longhand --skill longhand --global --yes
+npx skills add fdesimone/sounds-like-me --skill sounds-like-me --global --yes
 ```
 
-Or by hand: copy the `skills/longhand` folder into your assistant's skills folder. In apps that let you upload skills, zip the folder and upload it from the settings.
+Or by hand: copy the `skills/sounds-like-me` folder into your assistant's skills folder. In apps that let you upload skills, zip the folder and upload it from the settings.
 
-Longhand is a standard agent skill in plain Markdown. It has been tried with Claude so far.
+Sounds Like Me is a standard agent skill in plain Markdown. It has been tried with Claude so far.
 
 ## Use
 
 ```text
-/longhand
+/sounds-like-me
 ```
 
 Or in words: "learn my style", "I want you to write like me". Have about ten emails ready, a couple of long texts and, if you can, an AI draft with your own rewrite.
@@ -114,7 +114,7 @@ No pack for your language? The skill still works: it derives the patterns from a
 
 This project gets better with every language and every pattern people add. The most useful contributions:
 
-- **a new language pack**: two files, written natively, from the skeletons in `skills/longhand/languages/_template/`;
+- **a new language pack**: two files, written natively, from the skeletons in `skills/sounds-like-me/languages/_template/`;
 - **one more pattern** for a language that already has a pack: one entry is enough for a pull request;
 - **a report** of a profile that did not sound like you, and what you had to fix.
 
@@ -122,11 +122,11 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). The skill itself offers to draft a contr
 
 ## What is inside
 
-- `skills/longhand/SKILL.md`: the steps the assistant follows;
-- `skills/longhand/references/method.md`: which samples to trust and what to look for;
-- `skills/longhand/references/adding-a-language.md`: how to add or improve a language;
-- `skills/longhand/assets/personal-skill-template.md`: the template of the personal skill;
-- `skills/longhand/languages/<code>/`: one pack per language;
+- `skills/sounds-like-me/SKILL.md`: the steps the assistant follows;
+- `skills/sounds-like-me/references/method.md`: which samples to trust and what to look for;
+- `skills/sounds-like-me/references/adding-a-language.md`: how to add or improve a language;
+- `skills/sounds-like-me/assets/personal-skill-template.md`: the template of the personal skill;
+- `skills/sounds-like-me/languages/<code>/`: one pack per language;
 - `scripts/check_packs.py`: checks that every pack is complete.
 
 ## Privacy
@@ -148,4 +148,4 @@ The pattern lists build on [no-ai-slop](https://github.com/petergyang/no-ai-slop
 
 MIT. See [LICENSE](LICENSE). Changes are listed in [CHANGELOG.md](CHANGELOG.md).
 
-If Longhand helps you, a star helps other people find it.
+If Sounds Like Me helps you, a star helps other people find it.

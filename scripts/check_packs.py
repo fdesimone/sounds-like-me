@@ -8,7 +8,7 @@ import re
 import sys
 from pathlib import Path
 
-LANGUAGES = Path(__file__).resolve().parent.parent / "skills" / "longhand" / "languages"
+LANGUAGES = Path(__file__).resolve().parent.parent / "skills" / "sounds-like-me" / "languages"
 REQUIRED = ("ai-patterns.md", "punctuation.md")
 CODE = re.compile(r"^[a-z]{2}(-[A-Z]{2})?$")
 PLACEHOLDER = re.compile(r"\[LANGUAGE\]|\[Pattern name\]|\[Invented example\]|\[Rules\.\]")

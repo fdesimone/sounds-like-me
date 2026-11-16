@@ -1,10 +1,10 @@
-# Longhand
+# Sounds Like Me
 
-**Insegna al tuo assistente AI a scrivere con la tua voce.** Longhand è una skill per agenti che costruisce un profilo personale del tuo stile di scrittura a partire dai testi che hai scritto davvero, in qualsiasi lingua, così ciò che l'assistente scrive per te sembra scritto da te e non dall'AI.
+**Insegna al tuo assistente AI a scrivere con la tua voce.** Sounds Like Me è una skill per agenti che costruisce un profilo personale del tuo stile di scrittura a partire dai testi che hai scritto davvero, in qualsiasi lingua, così ciò che l'assistente scrive per te sembra scritto da te e non dall'AI.
 
 [Read in English](README.md)
 
-Un humanizer toglie l'AI da un testo. Longhand ci mette te.
+Un humanizer toglie l'AI da un testo. Sounds Like Me ci mette te.
 
 ## Esempio
 
@@ -20,7 +20,7 @@ Una richiesta, "chiedi al gruppo i commenti sul report entro venerdì", tre risu
 
 Pulito, ma potrebbe averlo scritto chiunque.
 
-**Con un profilo Longhand** (qui, di una persona che scrive mail brevi, riparte in minuscola dopo il saluto, spiega il motivo di una scadenza e chiude con "grazie,"):
+**Con un profilo Sounds Like Me** (qui, di una persona che scrive mail brevi, riparte in minuscola dopo il saluto, spiega il motivo di una scadenza e chiude con "grazie,"):
 
 > Salve,
 >
@@ -31,7 +31,7 @@ Pulito, ma potrebbe averlo scritto chiunque.
 
 ## Cosa fa
 
-`longhand` è una skill che ne costruisce un'altra, personale. Legge i tuoi testi, ricava il profilo della tua voce e lo salva come skill a sé (`stile-tuonome`). Da quel momento l'assistente la usa ogni volta che gli chiedi di scrivere a tuo nome.
+`sounds-like-me` è una skill che ne costruisce un'altra, personale. Legge i tuoi testi, ricava il profilo della tua voce e lo salva come skill a sé (`stile-tuonome`). Da quel momento l'assistente la usa ogni volta che gli chiedi di scrivere a tuo nome.
 
 La skill personale contiene:
 
@@ -44,7 +44,7 @@ La skill personale contiene:
 
 ## Come funziona
 
-Un modello linguistico scrive la cosa più probabile, quindi sceglie ciò che va bene per il maggior numero di lettori. Tu scegli per un lettore e per un argomento. Longhand registra quelle scelte.
+Un modello linguistico scrive la cosa più probabile, quindi sceglie ciò che va bene per il maggior numero di lettori. Tu scegli per un lettore e per un argomento. Sounds Like Me registra quelle scelte.
 
 1. **Raccoglie i campioni.** File che alleghi, testo che incolli, posta e documenti se li colleghi e dai il consenso.
 2. **Li pesa.** Non tutti i testi valgono uguale: quelli recenti e molto ordinati potrebbero essere già passati dall'AI. Il campione migliore è una bozza scritta dall'AI insieme alla versione che hai riscritto a mano, perché mostra cosa togli, cosa aggiungi e cosa cambi.
@@ -54,47 +54,47 @@ Un modello linguistico scrive la cosa più probabile, quindi sceglie ciò che va
 
 Due regole distinguono questo metodo da un elenco di frasi vietate. La prima: ciò che è tuo resta tuo. Se nei tuoi testi scritti a mano c'è uno schema che di solito si attribuisce all'AI, è la tua voce e non viene toccato. La seconda: la voce non coincide con lo scrivere bene. La skill non deve migliorarti, deve somigliarti (refusi esclusi).
 
-## Longhand e gli humanizer
+## Sounds Like Me e gli humanizer
 
-Strumenti come [Humanizer](https://github.com/blader/humanizer) sono molto bravi a trovare e togliere gli schemi dell'AI da un testo che hai già, e Humanizer sa anche seguire un campione di scrittura che incolli insieme al testo. Longhand fa un altro lavoro:
+Strumenti come [Humanizer](https://github.com/blader/humanizer) sono molto bravi a trovare e togliere gli schemi dell'AI da un testo che hai già, e Humanizer sa anche seguire un campione di scrittura che incolli insieme al testo. Sounds Like Me fa un altro lavoro:
 
 - costruisce il tuo profilo una volta sola, da molti testi, e lo conserva come skill da riusare;
 - registra ciò che fai (saluti, formule, ritmo, registri) e non solo ciò che va evitato;
 - lavora nella tua lingua, con un pacchetto di schemi e di regole di punteggiatura scritto apposta;
 - si aggiorna quando correggi un testo.
 
-Insieme funzionano bene: un humanizer ripulisce qualsiasi testo, Longhand fa nascere i testi già nella tua voce.
+Insieme funzionano bene: un humanizer ripulisce qualsiasi testo, Sounds Like Me fa nascere i testi già nella tua voce.
 
-Longhand scrive per lettori in carne e ossa. Superare i rilevatori di testi AI non è un obiettivo.
+Sounds Like Me scrive per lettori in carne e ossa. Superare i rilevatori di testi AI non è un obiettivo.
 
 ## Installazione
 
 In Claude Code, come plugin:
 
 ```text
-/plugin install longhand --marketplace fdesimone/longhand
+/plugin install sounds-like-me --marketplace fdesimone/sounds-like-me
 ```
 
 Con un agente che supporta le skill, incolla:
 
 ```text
-Installa la skill longhand da https://github.com/fdesimone/longhand
+Installa la skill sounds-like-me da https://github.com/fdesimone/sounds-like-me
 ```
 
 Oppure con `npx`:
 
 ```sh
-npx skills add fdesimone/longhand --skill longhand --global --yes
+npx skills add fdesimone/sounds-like-me --skill sounds-like-me --global --yes
 ```
 
-Oppure a mano: copia la cartella `skills/longhand` nella cartella delle skill del tuo assistente. Nelle app che permettono di caricare skill, comprimi la cartella e caricala dalle impostazioni.
+Oppure a mano: copia la cartella `skills/sounds-like-me` nella cartella delle skill del tuo assistente. Nelle app che permettono di caricare skill, comprimi la cartella e caricala dalle impostazioni.
 
-Longhand è una skill standard in Markdown. Finora è stata provata con Claude.
+Sounds Like Me è una skill standard in Markdown. Finora è stata provata con Claude.
 
 ## Uso
 
 ```text
-/longhand
+/sounds-like-me
 ```
 
 Oppure a parole: "impara il mio stile", "voglio che tu scriva come me". Tieni pronti una decina di mail, un paio di testi lunghi e, se puoi, una bozza dell'AI con la tua riscrittura.
@@ -109,7 +109,7 @@ Se la tua lingua non ha ancora un pacchetto la skill funziona lo stesso: ricava 
 
 Il progetto migliora con ogni lingua e con ogni schema che qualcuno aggiunge. I contributi più utili:
 
-- **un nuovo pacchetto di lingua**: due file, scritti da chi quella lingua la parla, a partire dagli scheletri in `skills/longhand/languages/_template/`;
+- **un nuovo pacchetto di lingua**: due file, scritti da chi quella lingua la parla, a partire dagli scheletri in `skills/sounds-like-me/languages/_template/`;
 - **uno schema in più** per una lingua che ha già il pacchetto: basta una voce per una pull request;
 - **una segnalazione** di un profilo che non ti somigliava, con ciò che hai dovuto correggere.
 
@@ -134,4 +134,4 @@ Gli elenchi di schemi partono da [no-ai-slop](https://github.com/petergyang/no-a
 
 MIT. Vedi [LICENSE](LICENSE). Le modifiche sono elencate in [CHANGELOG.md](CHANGELOG.md).
 
-Se Longhand ti è utile, una stella aiuta altre persone a trovarla.
+Se Sounds Like Me ti è utile, una stella aiuta altre persone a trovarla.

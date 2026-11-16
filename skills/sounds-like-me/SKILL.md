@@ -1,11 +1,11 @@
 ---
-name: longhand
+name: sounds-like-me
 description: Builds a personal writing-style skill from a person's real texts, so the assistant can write in their voice in any language. Use when someone says "write like me", "learn my style", "this doesn't sound like me", "I don't want this to read as AI", or wants to create or update their writing profile.
 ---
 
-# Longhand
+# Sounds Like Me
 
-Longhand is writing done by hand, in the writer's own script. This skill does not write texts. It builds a second, personal skill that describes how one person writes, and the assistant uses that skill whenever it writes in that person's name.
+"This sounds like me" is what a person says when a text written for them is right. This skill does not write texts. It builds a second, personal skill that describes how one person writes, and the assistant uses that skill whenever it writes in that person's name.
 
 Tools that "remove the AI" from a text work by subtraction: they strip the patterns typical of language models, but they do not know what the writer's voice is. The result is clean and anonymous. This skill does the other half of the job: it derives a positive profile from real texts (what this person does when writing) and pairs it with a list of things that are not theirs.
 

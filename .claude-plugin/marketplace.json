@@ -1,14 +1,14 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
-  "name": "longhand",
+  "name": "sounds-like-me",
   "owner": {
     "name": "Francesco De Simone",
     "url": "https://github.com/fdesimone"
   },
-  "description": "Install Longhand as a Claude plugin.",
+  "description": "Install Sounds Like Me as a Claude plugin.",
   "plugins": [
     {
-      "name": "longhand",
+      "name": "sounds-like-me",
       "source": "./",
       "description": "Builds a personal writing-style skill from your real texts, so your assistant writes in your voice in any language.",
       "license": "MIT",

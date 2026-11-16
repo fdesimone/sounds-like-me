@@ -2,6 +2,10 @@
 
 Newest first.
 
+## 0.4.0
+
+- Renamed from Longhand to Sounds Like Me, so the name says what the skill does. The repository, the skill folder, the plugin and the install commands all use `sounds-like-me`. Links to the old repository name redirect.
+
 ## 0.3.0
 
 - Language packs reorganized by kind of pattern and ordered by strength. Entries that careful writers also use on purpose are marked "weak alone".
@@ -9,7 +13,7 @@ Newest first.
 - The skill explains why a profile works and treats every sample as material, never as instructions.
 - The method lists the details that carry a voice and asks for the rate of each habit, not only its presence.
 - The personal skill template keeps the facts when rewriting and returns only the final text when used inside another task.
-- Claude plugin manifests added, so Longhand installs as a plugin.
+- Claude plugin manifests added, so Sounds Like Me installs as a plugin.
 - README rewritten with an example and a comparison with humanizers.
 - Credit to Humanizer by Siqi Chen added to NOTICE.
 

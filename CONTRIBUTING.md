@@ -1,10 +1,10 @@
 # Contributing
 
-Thank you for helping. Longhand grows through small contributions from people who know a language well. You do not need to write code.
+Thank you for helping. Sounds Like Me grows through small contributions from people who know a language well. You do not need to write code.
 
 ## Add a language
 
-Each language has a pack in `skills/longhand/languages/<code>/`:
+Each language has a pack in `skills/sounds-like-me/languages/<code>/`:
 
 - `ai-patterns.md`: how AI gives itself away in that language (required);
 - `punctuation.md`: the essential punctuation rules (required);
@@ -12,8 +12,8 @@ Each language has a pack in `skills/longhand/languages/<code>/`:
 
 Steps:
 
-1. Copy `skills/longhand/languages/_template/` to a folder named with the ISO code of your language (`es`, `fr`, `pt-BR`).
-2. Fill in the two files in the language itself. Full guidance is in `skills/longhand/references/adding-a-language.md`. The short version: do not translate another pack, start from real AI texts in your language, one invented example per entry, and say what to write instead.
+1. Copy `skills/sounds-like-me/languages/_template/` to a folder named with the ISO code of your language (`es`, `fr`, `pt-BR`).
+2. Fill in the two files in the language itself. Full guidance is in `skills/sounds-like-me/references/adding-a-language.md`. The short version: do not translate another pack, start from real AI texts in your language, one invented example per entry, and say what to write instead.
 3. Run `python3 scripts/check_packs.py`.
 4. Add your language to the table in `README.md`.
 5. Open a pull request.

@@ -14,7 +14,7 @@ MIT License
 
 What derives from them:
 
-- the lists of AI patterns in `skills/longhand/languages/` and the idea of a final self-check (no-ai-slop);
+- the lists of AI patterns in `skills/sounds-like-me/languages/` and the idea of a final self-check (no-ai-slop);
 - the grouping of patterns by kind, their ordering by strength, the "weak alone" marking, the account of why AI text sounds the way it does, the rule that a rewrite must keep the facts, and the list of details that carry a writer's voice (Humanizer).
 
 Wording and examples in this repository are our own. The Italian pack was written for Italian.
