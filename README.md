@@ -1,14 +1,33 @@
 # Longhand
 
-Teach your AI assistant to write in your own hand, starting from texts you really wrote. Works in any language.
+**Teach your AI assistant to write in your own voice.** Longhand is an agent skill that builds a personal writing-style profile from texts you really wrote, in any language, so that what the assistant writes for you sounds like you and not like AI.
 
 [Leggi in italiano](README.it.md)
 
-## The problem
+A humanizer takes the AI out of a text. Longhand puts you into it.
 
-AI-written texts all sound alike, and readers notice by the first line. Tools that "remove the AI" from a text help, but they work by subtraction: they strip the patterns typical of language models and leave a clean text that belongs to nobody.
+## Example
 
-To get a text that is yours you need the other half: a profile of how you write. Where you put the point, how much you cut, which words you use, how you greet people, which figures of speech come naturally, what you would never write.
+One request, "ask the team for comments on the report by Friday", three results. The example is illustrative.
+
+**Default AI:**
+
+> Hi team, I hope this message finds you well! I wanted to reach out regarding the Q3 report. It would be greatly appreciated if you could share your feedback by Friday. Please don't hesitate to reach out with any questions. Best regards
+
+**After removing the AI patterns:**
+
+> Hi team, please send your comments on the Q3 report by Friday. Thanks.
+
+Clean, but anyone could have written it.
+
+**With a Longhand profile** (here, of someone whose emails are short, start in lowercase after the greeting, give the reason for a deadline and sign off with "thanks,"):
+
+> Hi all,
+>
+> report's attached, v0.2. Comments by Friday so I can close it before the board meets.
+>
+> thanks,
+> Sam
 
 ## What it does
 
@@ -25,6 +44,8 @@ The personal skill contains:
 
 ## How it works
 
+A language model writes the most likely next thing, so by default it makes the choice that suits the widest range of readers. You choose for one reader and one subject. Longhand records those choices.
+
 1. **It collects samples.** Files you attach, text you paste, mail and documents if you connect them and agree.
 2. **It weighs them.** Not every text counts the same: recent, very tidy ones may already have been through an AI. The best sample is an AI draft together with the version you rewrote by hand, because it shows what you cut, what you add and what you change.
 3. **It writes the profile.** Only traits that appear at least twice in your texts.
@@ -33,9 +54,28 @@ The personal skill contains:
 
 Two rules set this apart from a list of banned phrases. First: what is yours stays yours. If your hand-written texts contain a pattern usually blamed on AI, it is your voice and it is left alone. Second: voice is not good writing. The skill is not there to improve you. It is there to sound like you (typos excluded).
 
+## Longhand and humanizers
+
+Tools such as [Humanizer](https://github.com/blader/humanizer) are very good at finding and removing AI writing patterns in a text you already have, and Humanizer can also match a writing sample you paste along with the text. Longhand does a different job:
+
+- it builds your profile once, from many texts, and keeps it as a skill you reuse;
+- it records what you do (greetings, formulas, rhythm, registers), not only what to avoid;
+- it works in your language, with a pack of patterns and punctuation rules written for it;
+- it updates when you correct a text.
+
+They work well together: a humanizer cleans any text, Longhand makes texts start out in your voice.
+
+Longhand writes for human readers. Getting past AI detectors is not a goal.
+
 ## Install
 
-With an agent that supports skills, paste:
+In Claude Code, as a plugin:
+
+```text
+/plugin install longhand --marketplace fdesimone/longhand
+```
+
+With any agent that supports skills, paste:
 
 ```text
 Install the longhand skill from https://github.com/fdesimone/longhand
@@ -48,6 +88,8 @@ npx skills add fdesimone/longhand --skill longhand --global --yes
 ```
 
 Or by hand: copy the `skills/longhand` folder into your assistant's skills folder. In apps that let you upload skills, zip the folder and upload it from the settings.
+
+Longhand is a standard agent skill in plain Markdown. It has been tried with Claude so far.
 
 ## Use
 
@@ -100,8 +142,10 @@ The method came out of building one person's profile and was generalized from th
 
 ## Credits
 
-The list of patterns to avoid and the idea of a final check build on [no-ai-slop](https://github.com/petergyang/no-ai-slop) by Peter Yang (MIT license). See [NOTICE.md](NOTICE.md).
+The pattern lists build on [no-ai-slop](https://github.com/petergyang/no-ai-slop) by Peter Yang and [Humanizer](https://github.com/blader/humanizer) by Siqi Chen, both MIT, and through them on Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing). See [NOTICE.md](NOTICE.md).
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE). Changes are listed in [CHANGELOG.md](CHANGELOG.md).
+
+If Longhand helps you, a star helps other people find it.

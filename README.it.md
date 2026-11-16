@@ -1,14 +1,33 @@
 # Longhand
 
-Insegna al tuo assistente AI a scrivere di tuo pugno, partendo dai testi che hai scritto davvero. Funziona in ogni lingua.
+**Insegna al tuo assistente AI a scrivere con la tua voce.** Longhand è una skill per agenti che costruisce un profilo personale del tuo stile di scrittura a partire dai testi che hai scritto davvero, in qualsiasi lingua, così ciò che l'assistente scrive per te sembra scritto da te e non dall'AI.
 
 [Read in English](README.md)
 
-## Il problema
+Un humanizer toglie l'AI da un testo. Longhand ci mette te.
 
-I testi scritti con l'AI si assomigliano tutti e chi legge se ne accorge alla prima riga. Gli strumenti che "tolgono l'AI" da un testo aiutano, ma lavorano per sottrazione: eliminano gli schemi tipici dei modelli e lasciano un testo pulito che non è di nessuno.
+## Esempio
 
-Per avere un testo tuo serve l'altra metà: un profilo di come scrivi tu. Dove metti il punto, quanto tagli, che parole usi, come saluti, quali figure retoriche ti vengono naturali, cosa non scriveresti mai.
+Una richiesta, "chiedi al gruppo i commenti sul report entro venerdì", tre risultati. L'esempio è illustrativo.
+
+**AI senza istruzioni:**
+
+> Ciao a tutti, spero che questa mail vi trovi bene! Vi scrivo in merito al report del terzo trimestre. Vi sarei molto grato se poteste condividere i vostri commenti entro venerdì. Non esitate a contattarmi per qualsiasi chiarimento. Cordiali saluti
+
+**Dopo aver tolto gli schemi dell'AI:**
+
+> Ciao a tutti, mandatemi i commenti sul report del terzo trimestre entro venerdì. Grazie.
+
+Pulito, ma potrebbe averlo scritto chiunque.
+
+**Con un profilo Longhand** (qui, di una persona che scrive mail brevi, riparte in minuscola dopo il saluto, spiega il motivo di una scadenza e chiude con "grazie,"):
+
+> Salve,
+>
+> allego la bozza del report aggiornata alla v_0.2. Vi chiedo di farmi avere i commenti entro venerdì così da chiudere prima del Board.
+>
+> grazie,
+> Sam
 
 ## Cosa fa
 
@@ -25,6 +44,8 @@ La skill personale contiene:
 
 ## Come funziona
 
+Un modello linguistico scrive la cosa più probabile, quindi sceglie ciò che va bene per il maggior numero di lettori. Tu scegli per un lettore e per un argomento. Longhand registra quelle scelte.
+
 1. **Raccoglie i campioni.** File che alleghi, testo che incolli, posta e documenti se li colleghi e dai il consenso.
 2. **Li pesa.** Non tutti i testi valgono uguale: quelli recenti e molto ordinati potrebbero essere già passati dall'AI. Il campione migliore è una bozza scritta dall'AI insieme alla versione che hai riscritto a mano, perché mostra cosa togli, cosa aggiungi e cosa cambi.
 3. **Scrive il profilo.** Solo tratti che compaiono almeno due volte nei tuoi testi.
@@ -33,7 +54,26 @@ La skill personale contiene:
 
 Due regole distinguono questo metodo da un elenco di frasi vietate. La prima: ciò che è tuo resta tuo. Se nei tuoi testi scritti a mano c'è uno schema che di solito si attribuisce all'AI, è la tua voce e non viene toccato. La seconda: la voce non coincide con lo scrivere bene. La skill non deve migliorarti, deve somigliarti (refusi esclusi).
 
+## Longhand e gli humanizer
+
+Strumenti come [Humanizer](https://github.com/blader/humanizer) sono molto bravi a trovare e togliere gli schemi dell'AI da un testo che hai già, e Humanizer sa anche seguire un campione di scrittura che incolli insieme al testo. Longhand fa un altro lavoro:
+
+- costruisce il tuo profilo una volta sola, da molti testi, e lo conserva come skill da riusare;
+- registra ciò che fai (saluti, formule, ritmo, registri) e non solo ciò che va evitato;
+- lavora nella tua lingua, con un pacchetto di schemi e di regole di punteggiatura scritto apposta;
+- si aggiorna quando correggi un testo.
+
+Insieme funzionano bene: un humanizer ripulisce qualsiasi testo, Longhand fa nascere i testi già nella tua voce.
+
+Longhand scrive per lettori in carne e ossa. Superare i rilevatori di testi AI non è un obiettivo.
+
 ## Installazione
+
+In Claude Code, come plugin:
+
+```text
+/plugin install longhand --marketplace fdesimone/longhand
+```
 
 Con un agente che supporta le skill, incolla:
 
@@ -48,6 +88,8 @@ npx skills add fdesimone/longhand --skill longhand --global --yes
 ```
 
 Oppure a mano: copia la cartella `skills/longhand` nella cartella delle skill del tuo assistente. Nelle app che permettono di caricare skill, comprimi la cartella e caricala dalle impostazioni.
+
+Longhand è una skill standard in Markdown. Finora è stata provata con Claude.
 
 ## Uso
 
@@ -86,8 +128,10 @@ Il metodo è nato costruendo il profilo di una sola persona ed è stato generali
 
 ## Crediti
 
-L'elenco degli schemi da evitare e l'idea del controllo finale partono da [no-ai-slop](https://github.com/petergyang/no-ai-slop) di Peter Yang (licenza MIT). Vedi [NOTICE.md](NOTICE.md).
+Gli elenchi di schemi partono da [no-ai-slop](https://github.com/petergyang/no-ai-slop) di Peter Yang e da [Humanizer](https://github.com/blader/humanizer) di Siqi Chen, entrambi con licenza MIT, e attraverso di loro dalla pagina di Wikipedia [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing). Vedi [NOTICE.md](NOTICE.md).
 
 ## Licenza
 
-MIT. Vedi [LICENSE](LICENSE).
+MIT. Vedi [LICENSE](LICENSE). Le modifiche sono elencate in [CHANGELOG.md](CHANGELOG.md).
+
+Se Longhand ti è utile, una stella aiuta altre persone a trovarla.

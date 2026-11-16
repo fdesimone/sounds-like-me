@@ -1,24 +1,30 @@
 # AI patterns in [LANGUAGE]
 
-> Skeleton for a new language pack. Write the file in the language itself, headings included. Do not translate another pack: collect patterns from real AI texts in this language. Give every entry one short invented example and say what to write instead. Delete these notes and every bracketed placeholder before submitting.
+> Skeleton for a new language pack. Write the file in the language itself, headings included. Do not translate another pack: collect patterns from real AI texts in this language. Give every entry one short invented example and say what to write instead. Order entries strongest first and mark as "weak alone" the ones careful human writers also use on purpose. Delete these notes and every bracketed placeholder before submitting.
 
-[One or two lines: what this list is and how to use it. Keep the reminder that it is a starting point and that patterns the person really uses come off the list.]
+[One or two lines: what this list is, where it comes from, and that wording and examples are your own.]
 
-## Sentence patterns
+## How to read this list
 
-- **[Pattern name].** "[Invented example]." [What to write instead.]
+[Keep these four points, in your language: it is a starting point and patterns the person really uses come off the list. Strongest first, with "weak alone" entries counted only in company. Structure outlasts vocabulary, so word lists come last. Examples are invented.]
 
-## Openings and closings
+## Staging instead of stating
 
-- **[Pattern name].** "[Invented example]." [What to write instead.]
-
-## Comments on the text
+[The sentence signals importance instead of adding a fact. These justify a change on one sighting.]
 
 - **[Pattern name].** "[Invented example]." [What to write instead.]
 
-## Inflated words
+## Rhythm by rule
 
-[The words models overuse in this language, and the adverbs that are usually empty.]
+[Shapes applied everywhere, whether or not the meaning asks for them.]
+
+- **[Pattern name].** "[Invented example]." [What to write instead.]
+
+## Inflation and borrowed authority
+
+[Ordinary facts dressed as important or expert-backed. Put the list of inflated words here, and note that it ages fastest.]
+
+- **[Pattern name].** "[Invented example]." [What to write instead.]
 
 ## Imports from English
 
@@ -26,13 +32,21 @@
 
 - **[Pattern name].** "[Invented example]." [What the language does instead.]
 
-## Assistant formulas in emails
+## Formatting by rule
 
-[Courtesy formulas models put in every message.]
+- **[Pattern name].** [Decoration applied to every item.]
 
-## Formatting
+## Leftovers from the chat and the draft
 
-- [Formatting habits that give AI away.]
+- **[Pattern name].** "[Invented example]." [Remove it.]
+
+## Writing for the wrong reader
+
+- **[Pattern name].** [Re-explaining what the reader already knows, with the decision in the last line.]
+
+## When not to act
+
+[Quotations, titles, proper names. Greetings and sign-offs. Texts from before late 2022. A single weak tell. Anything the person's samples show they do.]
 
 ## Two quick tests
 

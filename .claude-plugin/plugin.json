@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "longhand",
+  "description": "Builds a personal writing-style skill from your real texts, so your assistant writes in your voice in any language.",
+  "version": "0.3.0",
+  "author": {
+    "name": "Francesco De Simone",
+    "url": "https://github.com/fdesimone"
+  },
+  "homepage": "https://github.com/fdesimone/longhand",
+  "repository": "https://github.com/fdesimone/longhand",
+  "license": "MIT",
+  "keywords": ["writing", "writing-style", "voice", "humanizer", "multilingual"]
+}

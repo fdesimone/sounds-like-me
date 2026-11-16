@@ -12,7 +12,7 @@ Highest trust:
 
 High trust:
 
-- texts written before the person used AI. They are certainly theirs: check the date;
+- texts written before the person used AI. They are certainly theirs: check the date. Anything from before late 2022, when chat assistants became common, is safe;
 - short emails and messages they sent. Almost nobody asks AI to write a two-line reply;
 - rules the person states. They beat the samples.
 
@@ -70,6 +70,20 @@ For each dimension note the trait and a short example.
 **Formatting.** Bold, lists, headings, tables, emoji.
 
 **Moods.** How the writing changes when they are annoyed, grateful, in a hurry.
+
+## What carries a voice
+
+A model's default choices are the ones that fit everyone. A voice lives in the choices that fit only this writer. When you read the samples, look for these and make sure the profile protects them:
+
+- **Specific, unusual details.** A real place, an odd comparison, the example only someone in their trade would pick.
+- **Mixed feelings.** A judgment left partly unresolved: "mostly good, but something bothers me".
+- **Asides and self-corrections.** A parenthesis that qualifies, a "or rather" in mid-sentence.
+- **Dated or local references.** Slang, in-jokes, expressions tied to a place, a company or a period.
+- **Choices they can explain.** A first-person decision with its reason.
+
+These are the first things a polished rewrite removes, and the first things a reader who knows the person would miss.
+
+Sentence and paragraph habits are more stable than favorite words. Weight structure, rhythm and formulas above vocabulary lists, which shift with time and subject.
 
 ## From material to profile
 

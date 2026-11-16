@@ -16,6 +16,8 @@ Packs are written in their own language. Skeletons to copy are in `languages/_te
 - **Collect first, sort later.** Have several models write about ten texts of different kinds (an email, a post, a report page) and mark what keeps coming back.
 - **One example per entry.** Invented, short, with no reference to real people or companies.
 - **Say what to do instead.** A list of prohibitions alone produces stiff texts.
+- **Order by strength.** Put first the patterns that justify a change on one sighting. Mark as "weak alone" the ones careful human writers also use on purpose, such as a single dash or an ordinary hedge.
+- **Structure before words.** Sentence and paragraph habits persist across model generations. Favorite words change with each release, so word lists go last and need regular updates.
 - **Flag imports from English.** Many models think in English and translate: constructions, punctuation and capitalization carried over are among the clearest tells.
 - **Keep the same sections** as the template, so people moving between languages find their way.
 - **Write natively.** The author should be a native speaker or use the language for work.
